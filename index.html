@@ -48,6 +48,7 @@
         nav a:hover {
             background: #00ffea;
             color: #0d0d0d;
+            box-shadow: 0 0 10px #00ffea;
         }
         nav a:active {
             background: #00ccba;
@@ -62,10 +63,22 @@
             background: #1a1a1a;
             border: 1px solid #00ffea;
             border-radius: 10px;
+            position: relative;
+            overflow: hidden;
         }
         section h2 {
             margin-bottom: 10px;
             color: #00ffea;
+            position: relative;
+        }
+        section h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #00ffea;
+            margin-top: 5px;
+            animation: glow 1.5s infinite alternate;
         }
         section p {
             margin-bottom: 20px;
@@ -77,6 +90,30 @@
             padding: 10px 0;
             margin-top: 40px;
             border-top: 2px solid #00ffea;
+        }
+
+        /* Animation */
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea, 0 0 15px #00ffea;
+            }
+            to {
+                box-shadow: 0 0 20px #00ffea, 0 0 30px #00ffea, 0 0 40px #00ffea;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        section {
+            animation: fadeIn 1s ease-out;
         }
     </style>
 </head>
@@ -104,19 +141,19 @@
     <!-- Services Section -->
     <section id="services">
         <h2>Services</h2>
-        <p>ὓ9 Penetration Testing<br>
-           ὓ9 Network Security Auditing<br>
-           ὓ9 Vulnerability Assessment<br>
-           ὓ9 Security Consultation</p>
+        <p>🔹 Penetration Testing<br>
+           🔹 Network Security Auditing<br>
+           🔹 Vulnerability Assessment<br>
+           🔹 Security Consultation</p>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
         <p>Some of my notable projects include:<br>
-           ὓ9 Secure Authentication System<br>
-           ὓ9 Network Intrusion Detection Tools<br>
-           ὓ9 Automated Vulnerability Scanning Scripts</p>
+           🔹 Secure Authentication System<br>
+           🔹 Network Intrusion Detection Tools<br>
+           🔹 Automated Vulnerability Scanning Scripts</p>
     </section>
 
     <!-- Tools Section -->
