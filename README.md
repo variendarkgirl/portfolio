@@ -26,6 +26,8 @@ Secure Authentication System: Enhanced user security with multi-factor authentic
 
 Network Intrusion Detection Tools: Proactive network threat monitoring.
 
+WireShark Automation Scripts: Automatically detect and extract urls, usernames, and passwords from http responses in a pcap file.
+
 Automated Vulnerability Scanning Scripts: Streamlined vulnerability detection.
 
 
