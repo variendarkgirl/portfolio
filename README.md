@@ -12,6 +12,8 @@ Network Security Auditing: Ensuring secure network infrastructures.
 
 Vulnerability Assessment: Proactively finding weaknesses.
 
+Digital Forensics: Incident Handling and Reponse
+
 Security Consultation: Tailored security advice for your systems.
 
 🚀 My Projects
