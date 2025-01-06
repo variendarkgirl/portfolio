@@ -20,15 +20,15 @@ Security Consultation: Tailored security advice for your systems.
 
 Here are some key projects I've worked on:
 
-Remote Keylogger: A lightweight that acts as a screensaver but send key logs to the attacker machine.
+## Remote Keylogger: A lightweight that acts as a screensaver but send key logs to the attacker machine.
 
-Secure Authentication System: Enhanced user security with multi-factor authentication.
+## Secure Authentication System: Enhanced user security with multi-factor authentication.
 
-Network Intrusion Detection Tools: Proactive network threat monitoring.
+## Network Intrusion Detection Tools: Proactive network threat monitoring.
 
-WireShark Automation Scripts: Automatically detect and extract urls, usernames, and passwords from http responses in a pcap file.
+## WireShark Automation Scripts: Automatically detect and extract urls, usernames, and passwords from http responses in a pcap file.
 
-Automated Vulnerability Scanning Scripts: Streamlined vulnerability detection.
+## Automated Vulnerability Scanning Scripts: Streamlined vulnerability detection.
 
 
 📫 Get in Touch
