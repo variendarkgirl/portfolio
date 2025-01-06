@@ -20,6 +20,8 @@ Security Consultation: Tailored security advice for your systems.
 
 Here are some key projects I've worked on:
 
+Remote Keylogger: A lightweight that acts as a screensaver but send key logs to the attacker machine.
+
 Secure Authentication System: Enhanced user security with multi-factor authentication.
 
 Network Intrusion Detection Tools: Proactive network threat monitoring.
