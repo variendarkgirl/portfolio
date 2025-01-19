@@ -20,7 +20,7 @@ Incident Handling and Reponse
 
 Security Consultation: Tailored security advice for your systems.
 
-🚀 My Projects
+## 🚀 My Projects
 
 Here are some key projects I've worked on:
 
