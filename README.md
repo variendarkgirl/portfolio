@@ -6,13 +6,17 @@ Hello! I'm a Cybersecurity Professional passionate about securing systems, ident
 
 🛠️ What I Offer
 
-## Penetration Testing: Identifying and mitigating security flaws.
+## Penetration Testing: 
+Identifying and mitigating security flaws.
 
-## Network Security Auditing: Ensuring secure network infrastructures.
+## Network Security Auditing: 
+Ensuring secure network infrastructures.
 
-Vulnerability Assessment: Proactively finding weaknesses.
+## Vulnerability Assessment: 
+Proactively finding weaknesses.
 
-Digital Forensics: Incident Handling and Reponse
+## Digital Forensics: 
+Incident Handling and Reponse
 
 Security Consultation: Tailored security advice for your systems.
 
