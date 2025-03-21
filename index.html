@@ -11,126 +11,87 @@
             padding: 0;
         }
         body { 
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #0d0d0d;
-            color: #00ffea;
-            line-height: 1.6;
-            scroll-behavior: smooth;
+            font-family: 'Orbitron', sans-serif;
+            background-color: #0a0a0a;
+            color: #00f7ff;
+            overflow-x: hidden;
         }
 
-        /* Header Styles */
+        /* Cyberpunk Glowing Text */
+        @keyframes neonGlow {
+            0% { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff; }
+            50% { text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 30px #00f7ff; }
+            100% { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff; }
+        }
+        h1, h2 {
+            animation: neonGlow 1.5s infinite alternate;
+        }
+
+        /* Header */
         header {
-            background: linear-gradient(to right, #111, #222);
+            background: linear-gradient(90deg, #111, #222);
             padding: 20px 0;
             text-align: center;
-            border-bottom: 2px solid #00ffea;
+            border-bottom: 3px solid #9400ff;
         }
         header h1 {
-            color: #00ffea;
-            font-size: 2.5em;
+            font-size: 3em;
+            color: #9400ff;
+            text-transform: uppercase;
         }
 
-        /* Navigation Styles */
+        /* Navigation */
         nav {
             display: flex;
             justify-content: center;
             margin-top: 10px;
         }
         nav a {
-            color: #00ffea;
+            color: #00f7ff;
             text-decoration: none;
             padding: 10px 20px;
             margin: 0 10px;
-            border: 1px solid #00ffea;
+            border: 1px solid #00f7ff;
             border-radius: 5px;
-            transition: background 0.3s, color 0.3s;
+            transition: all 0.3s;
         }
         nav a:hover {
-            background: #00ffea;
-            color: #0d0d0d;
-            box-shadow: 0 0 10px #00ffea;
-        }
-        nav a:active {
-            background: #00ccba;
-            color: #ffffff;
+            background: #00f7ff;
+            color: #0a0a0a;
+            box-shadow: 0 0 10px #00f7ff;
         }
 
-        /* Section Styles */
+        /* Section Styling */
         section {
-            padding: 40px 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            background: #1a1a1a;
-            border: 1px solid #00ffea;
+            padding: 40px;
+            margin: 30px auto;
+            max-width: 900px;
+            background: rgba(20, 20, 20, 0.9);
+            border: 2px solid #9400ff;
             border-radius: 10px;
-            position: relative;
-            overflow: hidden;
-            animation: fadeIn 1s ease-out;
-        }
-        section h2 {
-            margin-bottom: 10px;
-            color: #00ffea;
-            position: relative;
-        }
-        section h2::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background: #00ffea;
-            margin-top: 5px;
-            animation: glow 1.5s infinite alternate;
-        }
-        section p {
-            margin-bottom: 20px;
+            box-shadow: 0 0 15px #9400ff;
         }
 
-        /* Footer Styles */
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 40px;
-            border-top: 2px solid #00ffea;
-        }
-        /* Animation */
-        @keyframes glow {
-            from {
-                box-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea, 0 0 15px #00ffea;
-            }
-            to {
-                box-shadow: 0 0 20px #00ffea, 0 0 30px #00ffea, 0 0 40px #00ffea;
-            }
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Cyber Grid Background */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+            z-index: -1;
+            opacity: 0.2;
         }
 
-        /* Dark/Light Mode Toggle */
-        .dark-mode {
-            background-color: #ffffff;
-            color: #333;
-        }
-        .dark-mode header {
-            background: linear-gradient(to right, #222, #111);
-        }
-        .dark-mode nav a {
-            color: #333;
-        }
-
-        /* Typing Effect */
+        /* Typing Animation */
         .typing-effect {
             font-size: 1.5em;
-            color: #00ffea;
+            color: #00f7ff;
             white-space: nowrap;
             overflow: hidden;
-            border-right: 2px solid #00ffea;
+            border-right: 2px solid #00f7ff;
             width: 0;
             animation: typing 4s steps(30) 1s forwards;
         }
@@ -140,107 +101,55 @@
             100% { width: 100%; }
         }
 
-        /* Particles Background */
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://cdn.pixabay.com/photo/2017/11/13/04/13/abstract-2942007_960_720.jpg') center center no-repeat;
-            background-size: cover;
-            z-index: -1;
-            opacity: 0.3;
-        }
-    .project-card {
+        /* Project Cards */
+        .project-card {
+            background: rgba(30, 30, 30, 0.8);
+            padding: 15px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
-            padding: 15px;
-            background: #222;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
+            transition: 0.3s;
         }
         .project-card:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 15px rgba(0, 255, 234, 0.3);
+            box-shadow: 0 0 20px rgba(148, 0, 255, 0.5);
         }
         .project-icon {
             font-size: 2em;
+            color: #9400ff;
             margin-right: 15px;
-            color: #00ffea;
         }
-        .project-details {
-            flex-grow: 1;
-        }
-        .project-links {
-            display: flex;
-            gap: 10px;
-        }
-        .project-link {
-            color: #00ffea;
+
+        /* Contact */
+        .contact-info a {
+            color: #00f7ff;
             text-decoration: none;
-            padding: 5px 10px;
-            border: 1px solid #00ffea;
-            border-radius: 5px;
-            transition: background 0.3s;
+            transition: color 0.3s;
         }
-        .project-link:hover {
-            background: #00ffea;
-            color: #0d0d0d;
-        }
-        
-        /* GitHub Stats */
-        #github-stats {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-        .stat-card {
-            background: #222;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            flex: 1;
-            margin: 0 10px;
+        .contact-info a:hover {
+            color: #9400ff;
         }
     </style>
 </head>
 <body>
 
-    <!-- Particles Background -->
-    <div class="particles"></div>
- 
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
-        <h1>My Cyber Portfolio</h1>
+        <h1>Cyber Portfolio</h1>
         <nav>
-            <a href="#about">About Me</a>
-            <a href="#services">Services</a>
+            <a href="#about">About</a>
             <a href="#projects">Projects</a>
-            <a href="#tools">Tools</a>
-            <a href="#resources">Resources</a>
-            <a href="#contact">Contact Me</a>
-            <a href="javascript:void(0);" id="dark-mode-toggle">🌙</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- About Me Section -->
+    <!-- About Me -->
     <section id="about">
         <h2>About Me</h2>
-        <p class="typing-effect">Hello, I'm a certified ethical hacker.</p>
+        <p class="typing-effect">Hello, I'm a cybersecurity enthusiast specializing in penetration testing and ethical hacking.</p>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>Services</h2>
-        <p>🔹 Penetration Testing<br>
-           🔹 Network Security Auditing<br>
-           🔹 Vulnerability Assessment<br>
-           🔹 Security Consultation</p>
-    </section>
-
-    <!-- Projects Section -->
+    <!-- Projects -->
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-card">
@@ -248,9 +157,7 @@
             <div class="project-details">
                 <h3>Bulk Downloader</h3>
                 <p>Efficient file downloading tool with advanced management capabilities.</p>
-                <div class="project-links">
-                    <a href="https://github.com/variendarkgirl/BulkDownloader" class="project-link" target="_blank">GitHub</a>
-                </div>
+                <a href="https://github.com/variendarkgirl/BulkDownloader" target="_blank" class="contact-info">GitHub</a>
             </div>
         </div>
         <div class="project-card">
@@ -258,77 +165,21 @@
             <div class="project-details">
                 <h3>QR Tools</h3>
                 <p>Versatile QR code generation and management utility.</p>
-                <div class="project-links">
-                    <a href="https://github.com/variendarkgirl/qr-tools" class="project-link" target="_blank">GitHub</a>
-                </div>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="project-icon">💻</div>
-            <div class="project-details">
-                <h3>CPU Monitor</h3>
-                <p>Real-time system performance and resource tracking application.</p>
-                <div class="project-links">
-                    <a href="https://github.com/variendarkgirl/cpumon" class="project-link" target="_blank">GitHub</a>
-                </div>
+                <a href="https://github.com/variendarkgirl/qr-tools" target="_blank" class="contact-info">GitHub</a>
             </div>
         </div>
     </section>
 
-    <!-- New GitHub Stats Section -->
-    <section id="github-stats">
-        <div class="stat-card">
-            <h3>Repositories</h3>
-            <p>3</p>
-        </div>
-        <div class="stat-card">
-            <h3>Total Commits</h3>
-            <p>120+</p>
-        </div>
-        <div class="stat-card">
-            <h3>Technologies</h3>
-            <p>Python, Shell</p>
-        </div>
-    </section>
-
-    <!-- Tools Section -->
-    <section id="tools">
-        <h2>Tools I Use</h2>
-        <p>🔹 Metasploit Framework<br>
-           🔹 Burp Suite<br>
-           🔹 Nmap<br>
-           🔹 Wireshark<br>
-           🔹 OWASP ZAP</p>
-    </section>
-    <!-- Resources Section -->
-    <section id="resources">
-        <h2>Learning Resources</h2>
-        <p>🔹 <a href="https://owasp.org/" style="color: #00ffea;">OWASP</a> for security best practices<br>
-           🔹 <a href="https://exploit-db.com/" style="color: #00ffea;">Exploit Database</a> for vulnerabilities<br>
-           🔹 <a href="https://tryhackme.com/" style="color: #00ffea;">TryHackMe</a> for hands-on learning<br>
-           🔹 <a href="https://www.hackthebox.eu/" style="color: #00ffea;">Hack The Box</a> for practical challenges</p>
-    </section>
-
-    <!-- Contact Me Section -->
+    <!-- Contact -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:youremail@example.com" style="color: #00ffea;"></a><br>
-           LinkedIn: <a href="#" style="color: #00ffea;">linkedin.com/in/</a></p>
+        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+        <p>&copy; 2025 Variendarkgirl. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        // Dark Mode Toggle
-        const toggleButton = document.getElementById("dark-mode-toggle");
-        toggleButton.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-            toggleButton.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
-        });
-    </script>
 
 </body>
 </html>
